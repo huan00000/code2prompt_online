@@ -1,0 +1,14 @@
+name: Code2Prompt Action
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Rust
+        run: sudo apt-get install -y cargo
+      - name: Install code2prompt
+        run: cargo install code2prompt
+      - name: Run Python script
+        run: python generate.py
