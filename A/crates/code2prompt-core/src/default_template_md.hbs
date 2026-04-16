@@ -1,0 +1,25 @@
+Project Path: {{ absolute_code_path }}
+
+Source Tree:
+
+```txt
+{{ source_tree }}
+```
+
+{{#each files}}
+{{#if code}}
+`{{path}}`:
+
+{{#unless ../no_codeblock}}```{{extension}}
+{{code}}
+```{{else}}
+{{code}}
+{{/unless}}
+
+{{/if}}
+{{/each}}
+
+{{#if git_diff}}
+Git Diff:
+{{ git_diff }}
+{{/if}}
