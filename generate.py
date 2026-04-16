@@ -13,7 +13,7 @@ def main():
 
     # 2. 执行code2prompt命令，完整捕获错误日志
     result = subprocess.run(
-        ["code2prompt", "--path", input_path, "--output", "b.txt"],
+        ["code2prompt", "--path", "--output-file", "b.txt"],
         capture_output=True,
         text=True,
         encoding="utf-8",
